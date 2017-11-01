@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from '../Header';
 import Home from '../Home';
 import About from '../About';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
@@ -16,6 +17,8 @@ function App(props){
             <li><Link to="/about">About</Link></li>
             <li><Link to="/home">Home</Link></li>
           </ul>
+
+          <Header />
           <Route render={({location, history, match}) => {
               return(
                   <RouteTransition
